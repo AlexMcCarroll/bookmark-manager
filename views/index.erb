@@ -5,17 +5,24 @@
     <title></title>
   </head>
   <body>
-
-    <% @links.each do |link| %>
-      <%= link %>
-      <br>
-    <% end %>
+    <ul>
+      <% @links.each do |link| %>
+        <li id="link-<%= link.id %>">
+          <a href="<%= link.url %>" target="_blank">
+            <%= link.url %>
+            <%= link.title %>
+          </a>
+        </li>
+        <br>
+      <% end %>
+    </ul>
     <br>
     <form action="/new_link" method="post">
       <label for="url">
         Enter URL
       </label>
       <input type="text" name="url">
+      <input type="text" name="title">
       <input type="submit" value="Submit">
     </form>
     <div id="flash">

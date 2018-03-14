@@ -4,6 +4,7 @@ feature 'Validate URL' do
   scenario 'Check user entry is a url' do
     visit('/')
     fill_in 'url', with: 'notalink'
+    fill_in 'title', with: 'notalink'
     click_button 'Submit'
     expect(page).to have_content('Not valid!')
   end

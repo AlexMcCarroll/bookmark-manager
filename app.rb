@@ -14,8 +14,8 @@ class BookmarkManager < Sinatra::Base
   post '/new_link' do
     @valid = Links.valid_url?(params[:url])
     if @valid
-      Links.create(params[:url])
-      flash[:notice] = 'Your link has been added!'
+      Links.create(url: params[:url], title: params[:title])
+      flash[:notice] = 'Your link has been added'
       redirect('/')
     else
       flash[:notice] = 'Not valid!'
