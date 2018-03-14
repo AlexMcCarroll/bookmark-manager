@@ -1,3 +1,5 @@
+require_relative '../../app.rb'
+
 feature 'Add link' do
   scenario 'Add a url link to homepage' do
     visit('/')

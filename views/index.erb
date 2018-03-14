@@ -5,19 +5,27 @@
     <title></title>
   </head>
   <body>
-    <ul>
-      <% @links.each do |link| %>
-        <%= link %>
-        <br>
-        <% end %>
-        <br>
-        <form action="/new_link" method="post">
-          <label for="url">
-            Enter URL
-          <input type="text" name="url">
-          </label>
-          <input type="submit" value="Submit">
-        </form>
-    <ul>
+
+    <% @links.each do |link| %>
+      <%= link %>
+      <br>
+    <% end %>
+    <br>
+    <form action="/new_link" method="post">
+      <label for="url">
+        Enter URL
+      </label>
+      <input type="text" name="url">
+      <input type="submit" value="Submit">
+    </form>
+    <div id="flash">
+      <% flash.keys.each do |type| %>
+        <div data-alert="data-alert" class="flash <%= type %> alert-box radius">
+          <%= flash[type] %>
+          <a href="/" class="close">&times;</a>
+        </div>
+      <% end %>
+    </div>
+
   </body>
 </html>

@@ -13,10 +13,12 @@ ENV['ENVIRONMENT'] = 'test'
 
 # Bring in the contents of the `app.rb` file
 require File.join(File.dirname(__FILE__), '..', 'app.rb')
+require File.join(File.dirname(__FILE__), '..', 'Rakefile.rb')
 
 # Require all the testing gems
 require 'capybara'
 require 'capybara/rspec'
+require 'rake'
 require 'rspec'
 
 # Tell Capybara to talk to BookmarkManager
@@ -70,7 +72,7 @@ RSpec.configure do |config|
   config.shared_context_metadata_behavior = :apply_to_host_groups
 
   config.before(:each) do
-    require_relative './test_database_setup'
+    require_relative './test_database_setup.rb'
   end
 
 # The settings below are suggested to provide a good initial experience

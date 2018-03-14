@@ -64,3 +64,12 @@ As a user
 So that I can keep the content I have added under control
 I would like to manage my links
 ```
+## To get started:
+
+```
+git clone https://github.com/sjmog/bookmark_manager
+cd bookmark_manager
+bundle install
+rake setup
+rspec
+```
