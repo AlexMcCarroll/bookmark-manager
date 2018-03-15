@@ -24,7 +24,11 @@ class Links
 
   def self.create(input)
     if valid_url?(input[:url])
-      DatabaseConnection.query("INSERT INTO links (url, title) VALUES('#{input[:url]}', '#{input[:title]}')")
+      DatabaseConnection.query("INSERT INTO links (url, title) VALUES('#{input[:url]}', '#{input[:title]}');")
     end
+  end
+
+  def self.delete(name)
+    DatabaseConnection.query("DELETE FROM links WHERE title = '#{name}'")
   end
 end

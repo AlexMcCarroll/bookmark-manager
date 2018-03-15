@@ -23,5 +23,11 @@ class BookmarkManager < Sinatra::Base
     end
   end
 
+  post '/delete_link' do
+    Links.delete(params[:title_delete])
+    # flash[:notice] = 'Your link has been deleted'
+    redirect('/')
+  end
+
   run! if app_file == $PROGRAM_NAME
 end

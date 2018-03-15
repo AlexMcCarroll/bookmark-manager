@@ -25,3 +25,11 @@ task :setup do
     connection.exec('CREATE TABLE links(url VARCHAR(60), title VARCHAR(60));')
   end
 end
+
+task :empty do
+  p 'Removing existing databases...'
+  %w[bookmark_manager bookmark_manager_test].each do |database|
+    connection = PG.connect
+    connection.exec("DROP DATABASE #{database};")
+  end
+end

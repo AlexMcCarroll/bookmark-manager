@@ -3,36 +3,77 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      /* Create two equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+        height: 300px;
+        /* Should be removed. Only for demonstration */
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+    </style>
   </head>
   <body>
-    <ul>
-      <% @links.each do |link| %>
-        <li id="link-<%= link.id %>">
-          <a href="<%= link.url %>" target="_blank">
-            <%= link.url %>
-            <%= link.title %>
-          </a>
-        </li>
-        <br>
-      <% end %>
-    </ul>
-    <br>
-    <form action="/new_link" method="post">
-      <label for="url">
-        Enter URL
-      </label>
-      <input type="text" name="url">
-      <input type="text" name="title">
-      <input type="submit" value="Submit">
-    </form>
-    <div id="flash">
-      <% flash.keys.each do |type| %>
-        <div data-alert="data-alert" class="flash <%= type %> alert-box radius">
-          <%= flash[type] %>
-          <a href="/" class="close">&times;</a>
+    <h1>Bookmarks Bar</h1>
+    <div class="row">
+      <div class="column">
+        <h2>List of Bookmarks</h2>
+        <ul>
+          <% @links.each do |link| %>
+            <li id="link-<%= link.id %>">
+              <a href="<%= link.url %>" target="_blank">
+                <%= link.title %>
+              </a>
+            </li>
+            <br>
+          <% end %>
+        </ul>
+      </div>
+      <div class="column">
+        <form action="/new_link" method="post">
+          <label for="url">
+            Enter URL
+          </label>
+          <input type="text" name="url">
+          <br>
+          <br>
+          <label for="title">
+            Enter Title
+          </label>
+          <input type="text" name="title">
+          <input type="submit" value="Submit">
+        </form>
+        <div id="flash">
+          <% flash.keys.each do |type| %>
+            <div data-alert="data-alert" class="flash <%= type %> alert-box radius">
+              <%= flash[type] %>
+              <a href="/" class="close">&times;</a>
+            </div>
+          <% end %>
         </div>
-      <% end %>
+        <br>
+        <div class="delete">
+          <form action="/delete_link" method="post">
+            <label for="title_delete">
+              Delete Title
+            </label>
+            <input type="text" name="title_delete">
+            <input type="submit" value="Delete"/>
+          </form>
+        </div>
+      </div>
     </div>
-
   </body>
 </html>

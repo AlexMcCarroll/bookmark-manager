@@ -26,4 +26,13 @@ describe Links do
       expect(urls).not_to include 'notalink'
     end
   end
+
+  describe '#self.delete' do
+    it 'deletes a link input by the user' do
+      Links.delete('Makers Academy')
+      link = Links.all
+      urls = link.map(&:url)
+      expect(urls).to_not include 'http://www.makersacademy.com'
+    end
+  end
 end
