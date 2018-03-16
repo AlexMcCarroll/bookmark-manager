@@ -38,6 +38,12 @@
               </a>
             </li>
             <br>
+            <form action="/update_link" method="post">
+              <input type="hidden" name="id" value="<%= link.id %>">
+              <input type="radio" name="update_field" value="url">
+              <input type="radio" name="update" value="title">
+              <input type="text" name="new_value">
+            </form>
           <% end %>
         </ul>
       </div>
@@ -73,6 +79,7 @@
             <input type="submit" value="Delete"/>
           </form>
         </div>
+
       </div>
     </div>
   </body>

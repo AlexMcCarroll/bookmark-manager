@@ -45,12 +45,13 @@ describe Links do
     it 'can update url' do
       index = rand(3)
       id = Links.all[index].id
-      expect{ Links.update(id,'url','http://valid.org') }.to change{ Links.all[index].url }.to('http://valid.org')
+      expect { Links.update(id, :url, 'http://valid.org') }.to change { Links.all[index].url }.to('http://valid.org')
     end
 
-    it 'can update url' do
-
+    it 'can update title' do
+      index = rand(3)
+      id = Links.all[index].id
+      expect { Links.update(id, :title, 'Valid') }.to change { Links.all[index].title }.to('Valid')
     end
   end
-
 end

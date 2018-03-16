@@ -1,7 +1,7 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/ricky/Documents/makers/w4/bookmark_manager/app.rb": [
+      "/Users/alexmccarroll/MakersWork/week-4/bookmark-manager/app.rb": [
         1,
         1,
         1,
@@ -31,12 +31,17 @@
         1,
         null,
         1,
+        null,
+        null,
+        1,
+        0,
+        0,
         null,
         null,
         1,
         null
       ],
-      "/Users/ricky/Documents/makers/w4/bookmark_manager/lib/list_of_links.rb": [
+      "/Users/alexmccarroll/MakersWork/week-4/bookmark-manager/lib/list_of_links.rb": [
         null,
         1,
         1,
@@ -46,15 +51,15 @@
         1,
         null,
         1,
-        58,
-        58,
-        58,
+        67,
+        67,
+        67,
         null,
         null,
         1,
         null,
-        15,
-        73,
+        18,
+        85,
         null,
         null,
         1,
@@ -68,7 +73,11 @@
         null,
         null,
         1,
+        2,
         1,
+        1,
+        1,
+        null,
         null,
         null,
         1,
@@ -78,7 +87,7 @@
         null,
         null
       ],
-      "/Users/ricky/Documents/makers/w4/bookmark_manager/lib/database_connection_setup.rb": [
+      "/Users/alexmccarroll/MakersWork/week-4/bookmark-manager/lib/database_connection_setup.rb": [
         1,
         null,
         1,
@@ -87,7 +96,7 @@
         0,
         null
       ],
-      "/Users/ricky/Documents/makers/w4/bookmark_manager/lib/database_connection.rb": [
+      "/Users/alexmccarroll/MakersWork/week-4/bookmark-manager/lib/database_connection.rb": [
         1,
         null,
         1,
@@ -98,11 +107,11 @@
         null,
         null,
         1,
-        22,
+        26,
         null,
         null
       ],
-      "/Users/ricky/Documents/makers/w4/bookmark_manager/Rakefile.rb": [
+      "/Users/alexmccarroll/MakersWork/week-4/bookmark-manager/Rakefile.rb": [
         1,
         1,
         null,
@@ -140,7 +149,7 @@
         null,
         null
       ],
-      "/Users/ricky/Documents/makers/w4/bookmark_manager/spec/database_connection_spec.rb": [
+      "/Users/alexmccarroll/MakersWork/week-4/bookmark-manager/spec/database_connection_spec.rb": [
         1,
         null,
         1,
@@ -161,35 +170,7 @@
         null,
         null
       ],
-      "/Users/ricky/Documents/makers/w4/bookmark_manager/spec/features/add_link_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/ricky/Documents/makers/w4/bookmark_manager/spec/features/delete_link_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null
-      ],
-      "/Users/ricky/Documents/makers/w4/bookmark_manager/spec/features/validate_url_spec.rb": [
+      "/Users/alexmccarroll/MakersWork/week-4/bookmark-manager/spec/features/add_link_spec.rb": [
         1,
         null,
         1,
@@ -202,7 +183,35 @@
         null,
         null
       ],
-      "/Users/ricky/Documents/makers/w4/bookmark_manager/spec/list_of_links_spec.rb": [
+      "/Users/alexmccarroll/MakersWork/week-4/bookmark-manager/spec/features/delete_link_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/alexmccarroll/MakersWork/week-4/bookmark-manager/spec/features/validate_url_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/alexmccarroll/MakersWork/week-4/bookmark-manager/spec/list_of_links_spec.rb": [
         1,
         null,
         1,
@@ -254,13 +263,14 @@
         null,
         null,
         1,
-        null,
-        null,
+        1,
+        1,
+        4,
         null,
         null,
         null
       ]
     },
-    "timestamp": 1521200503
+    "timestamp": 1521201462
   }
 }
