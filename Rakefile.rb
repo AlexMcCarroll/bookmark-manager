@@ -8,7 +8,7 @@ task :test_environment do
 
   # Clear the database
   connection.exec('TRUNCATE TABLE links;')
-  connection.exec("ALTER SEQUENCE id RESTART WITH 1")
+  connection.exec('ALTER SEQUENCE links_id_seq RESTART WITH 1')
 
   # Add the test data
   connection.exec("INSERT INTO links (url,title) VALUES('http://www.makersacademy.com', 'Makers Academy');")
