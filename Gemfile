@@ -8,6 +8,7 @@ gem 'rake'
 gem 'rspec'
 gem 'sinatra'
 gem 'sinatra-flash'
+gem 'rack'
 
 gem 'simplecov', require: false
 gem 'simplecov-console', require: false

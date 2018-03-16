@@ -3,30 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title></title>
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-
-      /* Create two equal columns that floats next to each other */
-      .column {
-        float: left;
-        width: 50%;
-        padding: 10px;
-        height: 300px;
-        /* Should be removed. Only for demonstration */
-      }
-
-      /* Clear floats after the columns */
-      .row:after {
-        content: "";
-        display: table;
-        clear: both;
-      }
-    </style>
   </head>
+  <link rel="stylesheet" href="style.css" type="text/css" />
   <body>
-    <h1>Bookmarks Bar</h1>
+    <div id="title_band">
+      <h1>Bookmarks Bar</h1>
+    </div>
     <div class="row">
       <div class="column">
         <h2>List of Bookmarks</h2>
@@ -36,14 +18,9 @@
               <a href="<%= link.url %>" target="_blank">
                 <%= link.title %>
               </a>
+              <button onclick="updateLink(<%= link.id %>)">Update</button>
+            <br></br>
             </li>
-            <br>
-            <form action="/update_link" method="post">
-              <input type="hidden" name="id" value="<%= link.id %>">
-              <input type="radio" name="update_field" value="url">
-              <input type="radio" name="update" value="title">
-              <input type="text" name="new_value">
-            </form>
           <% end %>
         </ul>
       </div>
@@ -71,7 +48,8 @@
         </div>
         <br>
         <div class="delete">
-          <form action="/delete_link" method="post">
+          <form action="/links" method="post">
+            <input type="hidden" name="_method" value="delete">
             <label for="title_delete">
               Delete Title
             </label>
@@ -79,8 +57,27 @@
             <input type="submit" value="Delete"/>
           </form>
         </div>
-
+        <br>
+        <div>
+        <form id="update_form" action="/links" method="post" style="visibility:hidden;">
+          <input type="hidden" name="_method" value="patch">
+          <input id="update_form_id" type="hidden" name="id" value="1">
+            URL
+          <input type="radio" name="update_field" value="url">
+            Title
+          <input type="radio" name="update_field" value="title">
+          <input type="text" name="new_value">
+          <input type="submit" value="Update"/>
+        </form>
+      </div>
       </div>
     </div>
   </body>
 </html>
+
+<script>
+  function updateLink(id) {
+    document.getElementById('update_form').style.visibility = 'visible';
+    document.getElementById('update_form_id').value = id;
+  }
+</script>
