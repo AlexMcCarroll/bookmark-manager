@@ -14,12 +14,8 @@ class Links
 
   def self.all
     # moved if else connection into database_connection_setup.rb
-    result = DatabaseConnection.query('SELECT * FROM links')
+    result = DatabaseConnection.query('SELECT * FROM links ORDER BY id ASC')
     result.map { |link| Links.new(link['id'], link['url'], link['title']) }
-  end
-
-  def self.valid_url?(url)
-    url =~ URI::DEFAULT_PARSER.make_regexp ? true : false
   end
 
   def self.create(input)
@@ -30,5 +26,15 @@ class Links
 
   def self.delete(name)
     DatabaseConnection.query("DELETE FROM links WHERE title = '#{name}'")
+  end
+
+  def self.update(id,update_field,new_value)
+    DatabaseConnection.query("UPDATE links SET url = '#{new_value}' WHERE id = #{id}")
+  end
+
+  private
+
+  def self.valid_url?(url)
+    url =~ URI::DEFAULT_PARSER.make_regexp ? true : false
   end
 end
