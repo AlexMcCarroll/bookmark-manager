@@ -1,7 +1,43 @@
 # Bookmark Manager
 
-## User Stories:
+## Aim:
+To build a web app that stores web bookmarks in a database.
 
+## Learning Objectives:
+Agile & TDD
+- Generate User Stories from Requirements
+- Build a complete full-stack feature.
+
+Engineering and 'Dev Recipes'
+- Set up a Ruby web project.
+- Attach a database to a web application.
+- Separate application behaviour from database behaviour.
+- Map objects across systems.
+- Create a CRUD system.
+- Implement a RESTful routing convention.
+
+Databases
+- Install PostgreSQL.
+- Create a database.
+- Use the psql command to interact with PostgreSQL.
+- Create tables using SQL.
+- Use SQL query terms like `SELECT`, `FROM`, `WHERE`, `*`.
+- Use SQL CRUD terms like `INSERT`, `DELETE`, and `UPDATE`.
+- Implement a one-to-many relationship.
+- Implement a many-to-many relationship.
+
+Tooling
+- Set up a test environment.
+- Use Rake to automate environment tasks.
+
+Skills
+- Test-Drive advanced Objects in Ruby, including adapter, wrapper, and service objects.
+- Use a step-by-step approach to pull out logic from concretes to abstractions.
+
+## Stack:
+![alt text](https://raw.githubusercontent.com/AlexMcCarroll/bookmark-manager/blob/master/Untitled%20Diagram.png
+
+## User Stories:
 ```
 As a user
 So that I can quickly go to web sites I regularly visit
