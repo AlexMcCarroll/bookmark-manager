@@ -35,7 +35,7 @@ Skills
 - Use a step-by-step approach to pull out logic from concretes to abstractions.
 
 ## Stack:
-![alt text](https://github.com/AlexMcCarroll/bookmark-manager/blob/master/FlowDiagram.png)
+![alt text](https://github.com/AlexMcCarroll/bookmark-manager/blob/master/flow-diagram.png)
 
 ## User Stories:
 ```
